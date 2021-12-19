@@ -22,6 +22,14 @@ Enter [esp-idf-vscode-boilerplate](https://github.com/nechry/esp-idf-vscode-boil
 
 Select (or create) the local directory into which you want to clone the project.
 
+[Not required] Change the default project name called *main* in files.
+This step renames the executable file. By default, the executable file is *main.elf*.
+
+Open CMakeLists.txt and replace main by <my_project_name>
+Open Makefile and replace main by <my_project_name>
+Open .vscode/launch.json and replace main by <my_project_name> (lines 11 and 19)
+
+
 ## Config, Build and Flash
 
 Open the command palette with the key combination of cmd + Shift + P.
