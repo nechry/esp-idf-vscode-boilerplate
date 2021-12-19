@@ -1,10 +1,6 @@
 {
     "files.associations": {
         "*.txt": "cmake",
-        "sdkconfig.h": "c",
-        "freertos.h": "c",
-        "stdio.h": "c",
-        "gpio.h": "c",
-        "task.h": "c"
+        "*.h": "c"
     }
 }
