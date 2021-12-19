@@ -12,7 +12,8 @@
       "${workspaceFolder}/main",
       "${workspaceFolder}/components",
       "${workspaceFolder}/build/config",
-      "${env:IDF_PATH}/examples/common_components/protocol_examples_common"
+      "${env:IDF_PATH}/examples/common_components/protocol_examples_common",
+      "${IDF_TOOLS}/xtensa-esp32-elf"
     ]
   },
   "configurations": [
@@ -26,11 +27,13 @@
           "${defaultBrowsePath}"
         ],
         "limitSymbolsToIncludedHeaders": false
-      },
+      },      
       "compilerPath": "xtensa-esp32-elf-gcc",
       "cStandard": "c11",
       "cppStandard": "c++17",
-      "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+      "defines": [],
+      "intelliSenseMode": "clang-x64"
     },
     {
       "name": "ESP8266",
@@ -46,7 +49,9 @@
       "compilerPath": "xtensa-lx106-elf-gcc",
       "cStandard": "c11",
       "cppStandard": "c++11",
-      "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+      "defines": [],
+      "intelliSenseMode": "clang-x64"
     }
   ],
   "version": 4
