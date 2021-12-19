@@ -8,7 +8,7 @@
         "request": "launch",
         "miDebuggerPath": "xtensa-esp32-elf-gdb",
         "cwd": "${workspaceFolder}/build",
-        "program": "${workspaceFolder}/build/esp-idf-vscode-boilerplate.elf",
+        "program": "${workspaceFolder}/build/main.elf",
         "setupCommands": [
           {
             "description": "Enable pretty-printing for gdb",
@@ -16,7 +16,7 @@
             "ignoreFailures": true
           },
           {
-            "text": "file '${workspaceFolder}/build/esp-idf-vscode-boilerplate.elf'"
+            "text": "file '${workspaceFolder}/build/main.elf'"
           },
           {
             "text": "target remote 127.0.0.1:3333"
