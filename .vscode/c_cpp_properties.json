@@ -1,6 +1,3 @@
-// 20211219133310
-// https://raw.githubusercontent.com/abobija/esp-idf-vscode-boilerplate/main/.vscode/c_cpp_properties.json
-
 {
   "env": {
     "defaultIncludePath": [
