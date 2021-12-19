@@ -1,3 +1,3 @@
-PROJECT_NAME := esp-idf-vscode-boilerplate
+PROJECT_NAME := main
 
 include $(IDF_PATH)/make/project.mk
