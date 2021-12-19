@@ -20,15 +20,6 @@
         }
     },
   },
-  "terminal.integrated.profiles.osx": {
-    "idf": {
-      "path": "/bin/zsh",
-      "icon": "star",
-      "args":["--init-file", "<%= IDF_PATH %>/export.sh", "-i"],
-        "env": {
-        }
-    },
-  },  
   "files.associations": {
       "*.md": "markdown",
       "*.mdx": "tdx",
