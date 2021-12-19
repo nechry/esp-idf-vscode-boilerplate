@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@nechry 
-fmuller-pns
-/
-esp32-vscode-project-template
-Public
-Code
-Issues
-Pull requests
-1
-Actions
-Projects
-Wiki
-Security
-Insights
-esp32-vscode-project-template/Doxyfile
-@fmuller-pns
-fmuller-pns update html_doc folder
-Latest commit 16924ca on 25 Aug
- History
- 1 contributor
-2494 lines (1940 sloc)  106 KB
-   
 # Doxyfile 1.8.13
 
 # This file describes the settings to be used by the documentation system
@@ -2521,16 +2492,3 @@ GENERATE_LEGEND        = YES
 # This tag requires that the tag HAVE_DOT is set to YES.
 
 DOT_CLEANUP            = YES
-© 2021 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
