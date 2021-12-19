@@ -48,6 +48,21 @@ idf.py -p (PORT) flash
 idf.py -p (PORT) monitor
 ```
 
+To exit monitoring, typing `Ctrl+AltGr+]`
+
+## Using Tasks for ESP32 to run, debug Project and so on
+
+1. In the menu, select `Run Task...`
+2. Select the task you want to launch:
+- `ESP32 - Build only`: just build the project
+- `ESP32 - Flash and Monitor`: build (when modifications of code), flash and monitor
+- `ESP32 - Clean Project`: Clean project (Full clean)
+- `ESP32 - OpenOCD with FT2232`: Run in dedicated terminal the openOCD command to debug the project
+- `ESP32 - Doxygen - HTML doc.`: Generate HTML documentation with Doxygen
+
+
+
+
 ## License
 
 [MIT](LICENSE)
