@@ -13,13 +13,21 @@
     }
   },
   "terminal.integrated.profiles.linux": {
-    "idf": {
-      "path": "/bin/bash",
-      "args":["--init-file", "<%= IDF_PATH %>/export.sh", "-i"],
-        "env": {
-        }
+      "idf": {
+        "path": "/bin/bash",
+        "args":["--init-file", "~/esp/esp-idf/export.sh", "-i"],
+          "env": {
+          }
+      },
+    },    
+    "terminal.integrated.profiles.osx": {      
+      "idf": {
+        "path": "/bin/bash",
+        "args":["--init-file", "~/esp/esp-idf/export.sh", "-i"],
+          "env": {
+          }
+      },      
     },
-  },
   "files.associations": {
       "*.md": "markdown",
       "*.mdx": "tdx",
