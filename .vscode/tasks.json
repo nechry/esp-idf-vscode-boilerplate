@@ -1,44 +1,30 @@
 {
-    // As of VS-code v1.56.1 integrated terminals require additional configuration to work correctly. 
-    // see https://code.visualstudio.com/docs/getstarted/settings#_settings-file-locations 
-    // to edit the `setting.json` file and add the following line:
-   // "terminal.integrated.allowWorkspaceConfiguration":true,
-  
-    "terminal.integrated.profiles.windows": {
-      "idf": {
-        "path": "cmd.exe",
-        "args": ["/k", "<%= IDF_PATH %>/export.bat"],
-        "env": {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "ESP32 - OpenOCD with J-Link",
+            "type": "shell",
+            "command": "~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20211111/openocd-esp32/bin/openocd -c\"set ESP_RTOS none\" -f jlink.cfg && exit",
+        },
+        {
+            "label": "ESP32 - OpenOCD with FT2232",
+            "type": "shell",
+            "command": "~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20211111/openocd-esp32/bin/openocd -c\"set ESP_RTOS none\" -f ftdi_ft2232.cfg && exit",
+        },
+        {
+            "label": "ESP32 - Doxygen - HTML doc.",
+            "type": "shell",
+            "command": "doxygen",
+            "problemMatcher": [],
+            "presentation": {
+                "showReuseMessage": true,
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "focus": false
+            }
         }
-      }
-    },
-    "terminal.integrated.profiles.linux": {
-      "idf": {
-        "path": "/bin/bash",
-        "args": [
-          "--init-file",
-          "~/esp/esp-idf/export.sh",
-          "-i"
-        ],
-        "env": {}
-      },
-    },
-    "terminal.integrated.profiles.osx": {
-      "idf": {
-        "path": "/bin/bash",
-        "args": [
-          "--init-file",
-          "~/esp/esp-idf/export.sh",
-          "-i"
-        ],
-        "env": {}
-      },
-    },    
-    "files.associations": {
-        "*.md": "markdown",
-        "*.mdx": "tdx",
-        "stdio.h": "c",
-        "*.txt": "cmake"
-     },
-     "C_Cpp.errorSquiggles": "Disabled",
-  }
+    ]
+}
