@@ -33,6 +33,54 @@
             "compileCommands": "${workspaceFolder}/build/compile_commands.json"
         },
         {
+            "name": "ESP32-S2",
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "browse": {
+                "path": [
+                    "${defaultBrowsePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "~/.espressif/tools/xtensa-esp32-s2-elf/esp-2021r2-8.4.0/xtensa-esp32-s2-elf/bin/xtensa-esp32-s2-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        },
+        {
+            "name": "ESP32-S3",
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "browse": {
+                "path": [
+                    "${defaultBrowsePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "~/.espressif/tools/xtensa-esp32-32-elf/esp-2021r2-8.4.0/xtensa-esp32-32-elf/bin/xtensa-esp32-32-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        },
+        {
+            "name": "ESP32-C3",
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "browse": {
+                "path": [
+                    "${defaultBrowsePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "~/.espressif/tools/riscv32-esp-elf/esp-2021r2-8.4.0/riscv32-esp-elf/bin/riscv32-esp-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        },
+        {
             "name": "ESP8266",
             "includePath": [
                 "${defaultIncludePath}"
