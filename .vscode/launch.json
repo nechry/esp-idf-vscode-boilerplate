@@ -2,12 +2,16 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+    
     {
       "name": "ESP32 OpenOCD",
       //"preLaunchTask": "ESP32 - OpenOCD with J-Link",
       "type": "cppdbg",
       "request": "launch",
-      "miDebuggerPath": "xtensa-esp32-elf-gdb",
+      "miDebuggerPath": "xtensa-esp32-elf-gdb",      // for ESP32
+      //"miDebuggerPath": "xtensa-esp32s2-elf-gdb",    // for ESP32-S2
+      //"miDebuggerPath": "xtensa-esp32s3-elf-gdb",    // for ESP32-S3
+      //"miDebuggerPath": "riscv32-esp-elf",           // for ESP32-C3
       "cwd": "${workspaceFolder}/build",
       "program": "${workspaceFolder}/build/main.elf",
       "setupCommands": [
@@ -30,7 +34,23 @@
         },
         {
           "text": "flushregs"
+        },
+        {
+          "text": "mon program_esp build/bootloader/bootloader.bin 0x1000 verify"
+        },
+        {
+          "text": "mon program_esp build/partition_table/partition-table.bin 0x8000 verify"
+        },
+        {
+          "text": "mon program_esp build/main.bin 0x10000 verify"
+        },
+        {
+          "text": "monitor reset halt"
+        },
+        {
+          "text": "flushregs"
         }
+
       ],
       "externalConsole": false,
       "logging": {
