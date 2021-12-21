@@ -14,7 +14,7 @@
             "command": "~/.espressif/tools/openocd-esp32/v0.10.0-esp32-20211111/openocd-esp32/bin/openocd -c\"set ESP_RTOS none\" -f ftdi_ft2232.cfg && exit",
         },
         {
-            "label": "ESP32 - Doxygen - HTML doc.",
+            "label": "Doxygen - HTML doc.",
             "type": "shell",
             "command": "doxygen",
             "problemMatcher": [],
