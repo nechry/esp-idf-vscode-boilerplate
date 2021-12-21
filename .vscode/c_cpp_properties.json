@@ -1,59 +1,54 @@
-// https://github.com/espressif/vscode-esp-idf-extension/blob/master/docs/C_CPP_CONFIGURATION.md
 {
-  "env": {
-    "defaultIncludePath": [
-      "${env:IDF_PATH}/components/**",
-      "${workspaceFolder}/main/**",
-      "${workspaceFolder}/components/**",
-      "${workspaceFolder}/build/config/*",
-      "${env:IDF_PATH}/examples/common_components/protocol_examples_common/**"
-    ],
-    "defaultBrowsePath": [
-      "${env:IDF_PATH}/components",
-      "${workspaceFolder}/main",
-      "${workspaceFolder}/components",
-      "${workspaceFolder}/build/config",
-      "${env:IDF_PATH}/examples/common_components/protocol_examples_common",
-      "${IDF_TOOLS}/xtensa-esp32-elf"
-    ]
-  },
-  "configurations": [
-    {
-      "name": "ESP32",
-      "includePath": [
-        "${defaultIncludePath}"
-      ],
-      "browse": {
-        "path": [
-          "${defaultBrowsePath}"
+    "env": {
+        "defaultIncludePath": [
+            "${env:IDF_PATH}/components/**",
+            "${workspaceFolder}/main/**",
+            "${workspaceFolder}/components/**",
+            "${workspaceFolder}/build/config/*",
+            "${env:IDF_PATH}/examples/common_components/protocol_examples_common/**"
         ],
-        "limitSymbolsToIncludedHeaders": false
-      },      
-      "compilerPath": "xtensa-esp32-elf-gcc",
-      "cStandard": "c11",
-      "cppStandard": "c++17",
-      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
-      "defines": [],
-      "intelliSenseMode": "clang-x64"
+        "defaultBrowsePath": [
+            "${env:IDF_PATH}/components",
+            "${workspaceFolder}/main",
+            "${workspaceFolder}/components",
+            "${workspaceFolder}/build/config",
+            "${env:IDF_PATH}/examples/common_components/protocol_examples_common"
+        ]
     },
-    {
-      "name": "ESP8266",
-      "includePath": [
-        "${defaultIncludePath}"
-      ],
-      "browse": {
-        "path": [
-          "${defaultBrowsePath}"
-        ],
-        "limitSymbolsToIncludedHeaders": false
-      },
-      "compilerPath": "xtensa-lx106-elf-gcc",
-      "cStandard": "c11",
-      "cppStandard": "c++11",
-      "compileCommands": "${workspaceFolder}/build/compile_commands.json",
-      "defines": [],
-      "intelliSenseMode": "clang-x64"
-    }
-  ],
-  "version": 4
+    "configurations": [
+        {
+            "name": "ESP32",
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "browse": {
+                "path": [
+                    "${defaultBrowsePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "~/.espressif/tools/xtensa-esp32-elf/esp-2021r2-8.4.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json"
+        },
+        {
+            "name": "ESP8266",
+            "includePath": [
+                "${defaultIncludePath}"
+            ],
+            "browse": {
+                "path": [
+                    "${defaultBrowsePath}"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "compilerPath": "xtensa-lx106-elf-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++11",
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "configurationProvider": "ms-vscode.cmake-tools"
+        }
+    ],
+    "version": 4
 }
